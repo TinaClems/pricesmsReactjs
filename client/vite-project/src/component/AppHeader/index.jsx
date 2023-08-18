@@ -3,8 +3,12 @@ import Pricelogo from "../../assets/pricelogo.jpg";
 import "../../style.css";
 import { BellFilled, MailOutlined } from "@ant-design/icons";
 import { Badge, Space, Typography } from "antd";
+import { Navigate } from "react-router-dom";
+import { useAuth } from "../Auth";
 
 function AppHeader() {
+  const auth = useAuth();
+  if(!auth.user){ return <Navigate to='/login' />}
   return (
     <div className="AppHeader">
       <img src={Pricelogo} width={40} className="App-logo" alt="logo" />

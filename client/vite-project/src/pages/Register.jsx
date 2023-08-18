@@ -36,9 +36,9 @@ export default function Register() {
     }
   };
   return (
-    <div className="w-full max-w-xs">
+    <div className="w-full h-screen bg-zinc-700  flex justify-center items-center">
       <form
-        className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4"
+        className="w-[20rem] shadow-md  bg-white flex flex-col gap-6 p-4 rounded-2xl px-8 py-4" 
         onSubmit={registerUser}
       >
         {" "}
@@ -54,6 +54,7 @@ export default function Register() {
             <option value="student">Student</option>
             <option value="lecturer">Lecturer</option>
             <option value="parent">Parent</option>
+            <option value="admin">Admin</option>
           </select>
         </div>
         <div className="mb-4">
